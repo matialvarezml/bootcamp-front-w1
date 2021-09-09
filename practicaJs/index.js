@@ -31,9 +31,6 @@ const calcularLitros = (kms) => {
     return (kms / 100)*2;
 }
 
-const calcularGasto = (precioLitro, recorrido) => precioLitro * recorrido;
+const calcularGasto = (precioLitro, kms) => calcularLitros(kms) * precioLitro;
 
-const recorrido1 = calcularLitros(25);
-
-console.log(calcularGasto(100,recorrido1));
-
+console.log(calcularGasto(100,25));
